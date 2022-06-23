@@ -1,4 +1,4 @@
-* {
+ * {
 	margin: 0;
 	padding: 0;
 }
@@ -32,15 +32,30 @@ body {
 	height: 100%;
 
 }
+.checkbtn{
+	cursor: pointer;
+	color: #fff;
+	float: right;
+	line-height: 8rem;
+	margin-right: 40px;
+	display: none;
+	
+}
 
-span.fa-bars {
+#check{
+	display: none;
+}
+
+
+
+/* span.fa-bars {
 	font-size: 2rem;
 	display: none;
 }
 
 .fa-bars {
 	color: #fff;
-}
+} */
 
 img {
 	max-width: 100%;
@@ -700,20 +715,51 @@ details .answers {
 
 @media (max-width: 600px) {
 
-	.menu-bar ul {
-		display: none;
-	}
-
-	span.fa-bars {
-		display: block;
-	}
-
 	.menu-bar {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		padding-block-start: 1rem;
+	}
+
+	ul {
+		
+		position: fixed;
+		width: 100%;
+		height: 20vh;
+		background-color: rgba(255, 255, 0, 0.178);
+		top: 80px;
+		text-align: center;
+		left: -100%;
+		transition: all .5s;
+		display: inline;
+
+	}
+
+	.menu-bar ul li{
+		display: block;
+	}
+
+	.menu-bar ul li a{
+		font-size: 20px;
+	}
+
+	.menu-bar a:hover, a.active{
+		background: none;
+		color: red;
+	}
+
+	/* span.fa-bars {
+		display: block;
+	} */
+
+	.checkbtn{
+		display: block;
+	}
+
+	#check:checked ~ ul{
+		left: 0;
 	}
 
 	.img {
@@ -1080,20 +1126,51 @@ details .answers {
 /* -------responsiveness of tablet--------- */
 
 @media (width: 768px) {
-	.menu-bar ul {
-		display: none;
-	}
-
-	span.fa-bars {
-		display: block;
-	}
-
 	.menu-bar {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		padding-block-start: 1rem;
+	}
+
+	ul {
+		
+		position: fixed;
+		width: 100%;
+		height: 20vh;
+		background-color: rgba(255, 255, 0, 0.178);
+		top: 80px;
+		text-align: center;
+		left: -100%;
+		transition: all .5s;
+		display: inline;
+
+	}
+
+	.menu-bar ul li{
+		display: block;
+	}
+
+	.menu-bar ul li a{
+		font-size: 20px;
+	}
+
+	.menu-bar a:hover, a.active{
+		background: none;
+		color: red;
+	}
+
+	/* span.fa-bars {
+		display: block;
+	} */
+
+	.checkbtn{
+		display: block;
+	}
+
+	#check:checked ~ ul{
+		left: 0;
 	}
 
 	.menu-bar img {
